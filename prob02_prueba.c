@@ -1,0 +1,9 @@
+#include "chess.h"
+#include "figures.h"
+#include <stdlib.h>
+
+void display(){
+  char **tiles_row = repeatH(join(whiteSquare, reverse(whiteSquare)), 4);
+  interpreter(flipV(tiles_row));
+}
+  
