@@ -3,5 +3,6 @@
 
 void display() {
   char** queenWhite = superImpose(reverse(queen),whiteSquare);
-  interpreter(queenWhite);
+  char** queenBlack = superImpose(queen, reverse(whiteSquare)); 
+  interpreter(repeatH(join(queenWhite, queenBlack), 5));
 }
