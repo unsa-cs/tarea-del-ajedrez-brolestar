@@ -37,7 +37,7 @@ void display(){
 */
 
 void display(){
-  char ** pawnsRow = repeatH(pawn, 8);
-  interpreter(pawnsRow);
+  char ** bishopCol = repeatV(bishop, 8);
+  interpreter(bishopCol);
 }
 
