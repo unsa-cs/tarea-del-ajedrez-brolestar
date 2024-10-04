@@ -15,7 +15,14 @@ void display(){
 }
 */
 
+/*
 void display(){
   char ** rotate = rotateL(knight);
+  interpreter(rotate);
+}
+*/
+
+void display(){
+  char ** rotate = rotateR(knight);
   interpreter(rotate);
 }
