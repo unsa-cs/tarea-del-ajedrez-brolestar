@@ -22,10 +22,18 @@ void display(){
 }
 */
 
+<<<<<<< HEAD
 /*
 void display(){
   char ** rotate = rotateR(knight);
   interpreter(rotate);
+=======
+void display() {
+  char **queen_col = repeatV(queen, 8);
+  char **w_col = repeatV(whiteSquare, 8);
+  char **test = join(queen_col, w_col);
+  interpreter(test);
+>>>>>>> cab75c2 (prueba de join con columnas, al parecer las columnas deben ser del mismo tamaño para que join funcione correctamente)
 }
 */
 
