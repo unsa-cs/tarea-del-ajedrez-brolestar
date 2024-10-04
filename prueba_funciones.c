@@ -30,7 +30,7 @@ void display(){
 */
 
 void display(){
-  char ** reverseR = reverse(whiteSquare);
+  char ** reverseR = reverse(knight);
   interpreter(reverseR);
 }
 
