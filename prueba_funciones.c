@@ -29,8 +29,15 @@ void display(){
 }
 */
 
+/*
 void display(){
   char ** reverseR = reverse(knight);
   interpreter(reverseR);
+}
+*/
+
+void display(){
+  char ** pawnsRow = repeatH(pawn, 8);
+  interpreter(pawnsRow);
 }
 
