@@ -35,9 +35,15 @@ void display(){
   interpreter(reverseR);
 }
 */
-
+/*
 void display(){
   char ** bishopCol = repeatV(bishop, 8);
   interpreter(bishopCol);
 }
+*/
 
+void display(){
+  char ** queenCol = repeatV(queenCol, 8);
+  char ** test = join(queenCol, whiteSquare);
+  interpreter(test);
+}
