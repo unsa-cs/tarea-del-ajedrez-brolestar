@@ -2,7 +2,7 @@
 #include "figures.h"
 
 void display(){
-  char** flip = flipV(queen);
+  char** flip = flipV(knight);
   interpreter(flip);
 }
 
