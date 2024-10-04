@@ -22,7 +22,15 @@ void display(){
 }
 */
 
+/*
 void display(){
   char ** rotate = rotateR(knight);
   interpreter(rotate);
 }
+*/
+
+void display(){
+  char ** reverseR = reverse(whiteSquare);
+  interpreter(reverseR);
+}
+
