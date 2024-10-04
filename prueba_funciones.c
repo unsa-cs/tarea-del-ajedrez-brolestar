@@ -44,6 +44,6 @@ void display(){
 
 void display(){
   char ** queenCol = repeatV(queenCol, 8);
-  char ** test = join(queenCol, whiteSquare);
+  char ** test = join(queenCol, queenCol);
   interpreter(test);
 }
