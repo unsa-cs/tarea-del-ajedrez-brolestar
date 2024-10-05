@@ -58,9 +58,18 @@ void display(){
 }
 */
 
+/*
 void display(){
   char ** whiteRow = repeatH(whiteSquare, 8);
   char ** blackRow = reverse(whiteRow);
   char ** test = up(whiteRow, blackRow); 
   interpreter(test);
+}
+
+*/
+
+void display(){
+  char ** dualBlock = join(whiteSquare, reverse(whiteSquare));
+  char ** emptyRow = repeatH(dualBlock, 4);
+  interpreter(emptyRow);
 }
