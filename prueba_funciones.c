@@ -68,8 +68,10 @@ void display(){
 
 */
 
+// Prueba de problema 3
 void display(){
   char ** dualBlock = join(whiteSquare, reverse(whiteSquare));
   char ** emptyRow = repeatH(dualBlock, 4);
-  interpreter(emptyRow);
+  char ** emptyRow2 = reverse(emptyRow);
+  interpreter(emptyRow2);
 }
