@@ -22,19 +22,18 @@ void display(){
 }
 */
 
-<<<<<<< HEAD
 /*
 void display(){
   char ** rotate = rotateR(knight);
   interpreter(rotate);
-=======
+*/
+
+/*
 void display() {
   char **queen_col = repeatV(queen, 8);
   char **w_col = repeatV(whiteSquare, 8);
   char **test = join(queen_col, w_col);
   interpreter(test);
->>>>>>> cab75c2 (prueba de join con columnas, al parecer las columnas deben ser del mismo tamaño para que join funcione correctamente)
-}
 */
 
 /*
@@ -43,6 +42,7 @@ void display(){
   interpreter(reverseR);
 }
 */
+
 /*
 void display(){
   char ** bishopCol = repeatV(bishop, 8);
@@ -50,8 +50,17 @@ void display(){
 }
 */
 
+/*
 void display(){
   char ** queenCol = repeatV(queen, 8);
   char ** test = join(queenCol, queenCol);
+  interpreter(test);
+}
+*/
+
+void display(){
+  char ** whiteRow = repeatH(whiteSquare, 8);
+  char ** blackRow = reverse(whiteRow);
+  char ** test = up(whiteRow, blackRow); 
   interpreter(test);
 }
