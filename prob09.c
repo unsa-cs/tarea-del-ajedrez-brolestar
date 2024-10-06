@@ -36,19 +36,30 @@ void display(){
   row4 = join(row4, pairSquare);
   row4 = join(row4, alterPawn);
 
+  
   // Fila 5
+  char ** whiteQueen = superImpose(queen, blackSquare);
   char ** row5 = join(whiteSquare, reverse(alterPawn));
   row5 = join(row5, alterPawn);
-  char ** whiteQueen = superImpose(queen, blackSquare);
   row5 = join(row5, whiteQueen);
   row5 = join(row5, pairSquare);
   row5 = join(row5, alterPawn);
   row5 = join(row5, blackSquare);
+
+  // Fila 6
+  char ** blackBishop = superImpose(reverse(bishop), whiteSquare);
+  char ** row6 = join(blackSquare, reverse(whiteQueen));
+  row6 = join(row6, blackSquare);
+  row6 = join(row6, blackBishop);
+  row6 = join(row6, reverse(pairSquare));
+  row6 = join(row6, reverse(alterPawn));
+  row6 = join(row6, whiteSquare);
 
   // Tablero
   char ** board = up(row1, row2);
   board = up(board, row3);
   board = up(board, row4);
   board = up(board, row5);
+  board = up(board, row6);
   interpreter(board);
 }
