@@ -69,6 +69,7 @@ void display(){
 */
 
 // Prueba de problema 3
+/*
 void display(){
   char ** dualBlock = join(whiteSquare, reverse(whiteSquare));
   char ** emptyRow = repeatH(dualBlock, 4);
@@ -76,4 +77,10 @@ void display(){
   char ** dualRow = up(emptyRow2, emptyRow);
   char ** quadRow = repeatV(dualRow, 2);
   interpreter(quadRow);
+}
+*/
+
+void display(){
+  char ** queenWhiteBg = superImpose(queen, whiteSquare);
+  interpreter(queenWhiteBg);
 }
