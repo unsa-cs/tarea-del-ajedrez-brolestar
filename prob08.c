@@ -32,8 +32,19 @@ void display(){
   row3 = join(row3, blackSquare);
   row3 = join(row3, whiteSquare);
   row3 = join(row3, queenBlackBg);
+
+  //Cuarta fila
+  char ** row4 = join(blackSquare, whiteSquare);
+  row4 = join(row4, blackSquare);
+  row4 = join(row4, whiteSquare);
+  row4 = join(row4, blackSquare);
+  row4 = join(row4, queenWhiteBg);
+  row4 = join(row4, blackSquare);
+  row4 = join(row4, whiteSquare);
+  
   //Tablero Final
   char ** solution = up(row1, row2);
   solution = up(solution, row3);
+  solution = up(solution, row4);
   interpreter(solution);
 }
