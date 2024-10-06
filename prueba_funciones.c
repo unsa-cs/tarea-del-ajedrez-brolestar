@@ -83,8 +83,10 @@ void display(){
 void display(){
   char ** queenCol = repeatV(queen, 8);
   char ** bgCol = repeatV(whiteSquare, 8);
+  char ** bishopCol = repeatV(bishop, 8);
   char ** queenColWhiteBg = superImpose(queenCol, bgCol);
-  char ** rotateCol = rotateR(queenColWhiteBg);
-  interpreter(rotateCol);
+  char ** bishopAndQueens = superImpose(bishopCol, queenColWhiteBg);
+  
+  interpreter(bishopAndQueens);
 
 }
