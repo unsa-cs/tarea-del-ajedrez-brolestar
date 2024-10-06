@@ -11,5 +11,10 @@ void display(){
   fRow = join(fRow, rook);
   fRow = reverse(fRow);
 
+  char ** dualBlock = join(whiteSquare, reverse(whiteSquare));
+  char ** emptyRow = repeatH(dualBlock, 4);
+  char ** emptyRowReverse = reverse(emptyRow);
+
+  fRow = superImpose(fRow, emptyRowReverse);
   interpreter(fRow);
 }
