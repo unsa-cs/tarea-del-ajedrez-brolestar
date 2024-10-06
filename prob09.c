@@ -22,7 +22,14 @@ void display(){
   row2 = join(row2, alterPawn);
   row2 = join(row2, reverse(pairSquare));
 
+  // Fila 3
+  char ** row3 = join(pairSquare, whiteSquare);
+  row3 = join(row3, reverse(whitePawn));
+  row3 = join(row3, pairSquare);
+  row3 = join(row3, pairSquare);
+
   // Tablero
   char ** board = up(row1, row2);
+  board = up(board, row3);
   interpreter(board);
 }
