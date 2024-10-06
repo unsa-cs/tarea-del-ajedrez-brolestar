@@ -18,5 +18,10 @@ void display() {
   char ** baseRowRotated = rotateR(rotateR(baseRow));
   char ** centerPattern = up(baseRow, baseRowRotated);
 
-  interpreter(centerPattern);
+  // Generar 3 filas vacias
+  char ** dualBlock = join(whiteSquare, reverse(whiteSquare));
+  char ** emptyRow = repeatH(dualBlock, 4);
+  char ** threeRowsPattern = up(emptyRow, reverse(emptyRow));
+  threeRowsPattern = up(reverse(emptyRow), threeRowsPattern);
+  interpreter(threeRowsPattern);
 }
