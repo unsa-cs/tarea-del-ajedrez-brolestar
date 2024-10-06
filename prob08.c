@@ -57,6 +57,15 @@ void display(){
   //Septima fila
   char ** row7 = flipV(row6);
 
+  //Octava fila
+  char ** row8 = join(blackSquare, whiteSquare);
+  row8 = join(row8, blackSquare);
+  row8 = join(row8, queenWhiteBg);
+  row8 = join(row8, blackSquare);
+  row8 = join(row8, whiteSquare);
+  row8 = join(row8, blackSquare);
+  row8 = join(row8, whiteSquare);
+
   //Tablero Final
   char ** solution = up(row1, row2);
   solution = up(solution, row3);
@@ -64,5 +73,6 @@ void display(){
   solution = up(solution, row5);
   solution = up(solution, row6);
   solution = up(solution, row7);
+  solution = up(solution, row8);
   interpreter(solution);
 }
