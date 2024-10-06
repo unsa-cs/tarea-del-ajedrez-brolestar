@@ -7,7 +7,7 @@ void display() {
   char ** emptyRow2 = reverse(emptyRow);
   char ** dualRow = up(emptyRow2, emptyRow);
 
-  //Fila de piezas 
+  //Fila de piezas blancas
   char ** fRow = join(rook, knight);
   fRow = join(fRow, bishop);
   fRow = join(fRow, queen);
@@ -16,8 +16,15 @@ void display() {
   fRow = join(fRow, knight);
   fRow = join(fRow, rook);
 
+  //Fila peones blancos
   char ** pRow = repeatH(pawn, 8);
-  char ** WhitePattern = up(fRow, pRow);
 
-  interpreter(WhitePattern);
+  //Piezas negras
+  char ** fRowBlack = reverse(fRow);
+  char ** pRowBlack = reverse(pRow);
+
+  char ** WhitePattern = up(fRow, pRow);
+  char ** BlackPattern = up(pRowBlack, fRowBlack);
+
+  interpreter(BlackPattern);
 }
