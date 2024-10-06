@@ -12,5 +12,7 @@ void display(){
 
 void display(){
   char ** pieceTuple = join(rook, join(knight, bishop));
-  interpreter(pieceTuple);
+  char ** reflectTest = flipV(pieceTuple);
+  char ** test = join(pieceTuple, reflectTest);
+  interpreter(test);
 }
