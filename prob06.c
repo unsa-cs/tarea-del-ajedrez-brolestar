@@ -31,8 +31,10 @@ void display() {
   WhitePattern = superImpose(WhitePattern,dualRow);
   BlackPattern = superImpose(BlackPattern, dualRow);
 
-  //test
-  char ** test = up(WhitePattern, BlackPattern);
+  //Tablero final
+  char ** final = up(WhitePattern, dualRow);
+  final = up(final, dualRow);
+  final = up(final, BlackPattern);
 
-  interpreter(test);
+  interpreter(final);
 }
