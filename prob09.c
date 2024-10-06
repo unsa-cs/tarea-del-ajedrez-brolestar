@@ -28,8 +28,17 @@ void display(){
   row3 = join(row3, pairSquare);
   row3 = join(row3, pairSquare);
 
+  // Fila 4
+  char ** row4 = join(blackSquare, alterPawn);
+  row4 = join(row4, blackSquare);
+  row4 = join(row4, whitePawn);
+  row4 = join(row4, blackSquare);
+  row4 = join(row4, pairSquare);
+  row4 = join(row4, alterPawn);
+
   // Tablero
   char ** board = up(row1, row2);
   board = up(board, row3);
+  board = up(board, row4);
   interpreter(board);
 }
