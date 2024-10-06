@@ -15,7 +15,7 @@ void display(){
   row1 = join(row1, whiteSquare);
   row1 = join(row1, blackSquare);
 
-  //Segun fila
+  //Segunda fila
   char ** row2 = join(blackSquare, whiteSquare);
   row2 = join(row2, blackSquare);
   row2 = join(row2, whiteSquare);
@@ -23,9 +23,17 @@ void display(){
   row2 = join(row2, whiteSquare);
   row2 = join(row2, blackSquare);
   row2 = join(row2, whiteSquare);
-  row2 = join(row2, blackSquare);
   
+  //Tercera fila
+  char ** row3 = join(whiteSquare, blackSquare);
+  row3 = join(row3, whiteSquare);
+  row3 = join(row3, blackSquare);
+  row3 = join(row3, whiteSquare);
+  row3 = join(row3, blackSquare);
+  row3 = join(row3, whiteSquare);
+  row3 = join(row3, queenBlackBg);
   //Tablero Final
   char ** solution = up(row1, row2);
+  solution = up(solution, row3);
   interpreter(solution);
 }
