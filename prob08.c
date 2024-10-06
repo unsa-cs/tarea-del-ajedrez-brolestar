@@ -42,9 +42,19 @@ void display(){
   row4 = join(row4, blackSquare);
   row4 = join(row4, whiteSquare);
   
+  //Quinta fila
+  char ** row5 = join(whiteSquare, blackSquare);
+  row5 = join(row5, queenWhiteBg);
+  row5 = join(row5, blackSquare);
+  row5 = join(row5, whiteSquare);
+  row5 = join(row5, blackSquare);
+  row5 = join(row5, whiteSquare);
+  row5 = join(row5, blackSquare);
+  
   //Tablero Final
   char ** solution = up(row1, row2);
   solution = up(solution, row3);
   solution = up(solution, row4);
+  solution = up(solution, row5);
   interpreter(solution);
 }
