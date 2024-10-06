@@ -45,10 +45,20 @@ void display(){
   //Quinta fila
   char ** row5 = flipV(row4);
   
+  //Sexta fila
+  char ** row6 = join(blackSquare, whiteSquare);
+  row6 = join(row6, blackSquare);
+  row6 = join(row6, whiteSquare);
+  row6 = join(row6, blackSquare);
+  row6 = join(row6, whiteSquare);
+  row6 = join(row6, queenBlackBg);
+  row6 = join(row6, whiteSquare);
+
   //Tablero Final
   char ** solution = up(row1, row2);
   solution = up(solution, row3);
   solution = up(solution, row4);
   solution = up(solution, row5);
+  solution = up(solution, row6);
   interpreter(solution);
 }
