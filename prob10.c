@@ -28,10 +28,20 @@ void display(){
   // Cuarta fila
   char ** row4 = reverse(emptyRow);
 
+  // Quinta fila
+  char ** blackKingblackBg = superImpose(reverse(king), blackSquare);
+  char ** whiteKnightblackBg = superImpose(knight, blackSquare);
+  char ** row5 = join(whiteSquare, blackKingblackBg);
+  row5 = join(row5, alterPawn);
+  row5 = join(row5, reverse(pairSquare));
+  row5 = join(row5, whiteKnightblackBg);
+  row5 = join(row5, pairSquare);
+
   // Tablero
   char ** board =  up(row1, row2);
   board = up(board, row3);
   board = up(board, row4);
+  board = up(board, row5);
   interpreter(board);
   
 }
