@@ -10,5 +10,11 @@ void display(){
   char ** whitePawn = superImpose(pawn, whiteSquare);
   char ** alterPawn = superImpose(reverse(pawn), whiteSquare);
 
-  interpreter(alterPawn);
+  // Fila 1
+  char ** row1 = repeatH(pairSquare, 3);
+  char ** blackKing = superImpose(reverse(king), whiteSquare);
+  row1 = join(row1, blackKing);
+  row1 = join(row1, blackSquare);
+
+  interpreter(row1);
 }
