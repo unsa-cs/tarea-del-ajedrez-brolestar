@@ -43,13 +43,7 @@ void display(){
   row4 = join(row4, whiteSquare);
   
   //Quinta fila
-  char ** row5 = join(whiteSquare, blackSquare);
-  row5 = join(row5, queenWhiteBg);
-  row5 = join(row5, blackSquare);
-  row5 = join(row5, whiteSquare);
-  row5 = join(row5, blackSquare);
-  row5 = join(row5, whiteSquare);
-  row5 = join(row5, blackSquare);
+  char ** row5 = flipV(row4);
   
   //Tablero Final
   char ** solution = up(row1, row2);
