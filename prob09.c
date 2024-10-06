@@ -55,11 +55,20 @@ void display(){
   row6 = join(row6, reverse(alterPawn));
   row6 = join(row6, whiteSquare);
 
+  // Fila 7
+  char ** whiteKing = superImpose(king, whiteSquare);
+  char ** row7 = join(pairSquare, pairSquare);
+  row7 = join(row7, whiteKing);
+  row7 = join(row7, reverse(alterPawn));
+  row7 = join(row7, whiteSquare);
+  row7 = join(row7, reverse(alterPawn));
+
   // Tablero
   char ** board = up(row1, row2);
   board = up(board, row3);
   board = up(board, row4);
   board = up(board, row5);
   board = up(board, row6);
+  board = up(board, row7);
   interpreter(board);
 }
