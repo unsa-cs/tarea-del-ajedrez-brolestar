@@ -23,8 +23,16 @@ void display() {
   char ** fRowBlack = reverse(fRow);
   char ** pRowBlack = reverse(pRow);
 
+  //Patrones
   char ** WhitePattern = up(fRow, pRow);
   char ** BlackPattern = up(pRowBlack, fRowBlack);
 
-  interpreter(BlackPattern);
+  //Patrones con fondo
+  WhitePattern = superImpose(WhitePattern,dualRow);
+  BlackPattern = superImpose(BlackPattern, dualRow);
+
+  //test
+  char ** test = up(WhitePattern, BlackPattern);
+
+  interpreter(test);
 }
