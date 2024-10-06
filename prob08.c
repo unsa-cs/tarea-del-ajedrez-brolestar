@@ -54,11 +54,15 @@ void display(){
   row6 = join(row6, queenBlackBg);
   row6 = join(row6, whiteSquare);
 
+  //Septima fila
+  char ** row7 = flipV(row6);
+
   //Tablero Final
   char ** solution = up(row1, row2);
   solution = up(solution, row3);
   solution = up(solution, row4);
   solution = up(solution, row5);
   solution = up(solution, row6);
+  solution = up(solution, row7);
   interpreter(solution);
 }
