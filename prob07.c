@@ -23,5 +23,9 @@ void display() {
   char ** emptyRow = repeatH(dualBlock, 4);
   char ** threeRowsPattern = up(emptyRow, reverse(emptyRow));
   threeRowsPattern = up(reverse(emptyRow), threeRowsPattern);
-  interpreter(threeRowsPattern);
+
+  // Tablero completo
+  char ** table = up(threeRowsPattern, centerPattern);
+  table = up(table, reverse(threeRowsPattern));
+  interpreter(table);
 }
