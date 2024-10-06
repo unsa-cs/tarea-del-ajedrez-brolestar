@@ -80,6 +80,7 @@ void display(){
 }
 */
 
+/*
 void display(){
   char ** queenCol = repeatV(queen, 8);
   char ** bgCol = repeatV(whiteSquare, 8);
@@ -89,4 +90,12 @@ void display(){
   
   interpreter(bishopAndQueens);
 
+}
+*/
+
+void display(){
+  char ** blackSquare = reverse(whiteSquare);
+  char ** rookBlackBg = superImpose(rook, blackSquare);
+  char ** test = reverse(rookBlackBg);
+  interpreter(test);
 }
