@@ -7,9 +7,11 @@ void display() {
   row3 = join(row3, reverse(whiteSquare));
   
   // Creando el caballo y su rotado
-  char ** knightBg = superImpose(knight, whiteSquare);
-  char ** knightBgRot = superImpose(rotateR(knight), reverse(whiteSquare));
+  char ** knightBg = superImpose(knight, reverse(whiteSquare));
+  char ** knightBgRot = superImpose(rotateR(knight), whiteSquare);
   
-  char ** test = join(knightBg, knightBgRot);
-  interpreter(test);
+  char ** baseRow = join(reverse(row3), knightBg);
+  baseRow = join(baseRow, knightBgRot);
+  baseRow = join(baseRow, row3);
+  interpreter(baseRow);
 }
