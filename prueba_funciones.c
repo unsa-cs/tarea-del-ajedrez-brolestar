@@ -81,6 +81,9 @@ void display(){
 */
 
 void display(){
-  char ** queenWhiteBg = superImpose(queen, whiteSquare);
-  interpreter(queenWhiteBg);
+  char ** queenCol = repeatV(queen, 8);
+  char ** bgCol = repeatV(whiteSquare, 8);
+  char ** queenColWhiteBg = superImpose(queenCol, bgCol);
+  interpreter(queenColWhiteBg);
+
 }
