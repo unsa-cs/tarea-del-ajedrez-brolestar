@@ -84,6 +84,7 @@ void display(){
   char ** queenCol = repeatV(queen, 8);
   char ** bgCol = repeatV(whiteSquare, 8);
   char ** queenColWhiteBg = superImpose(queenCol, bgCol);
-  interpreter(queenColWhiteBg);
+  char ** rotateCol = rotateR(queenColWhiteBg);
+  interpreter(rotateCol);
 
 }
