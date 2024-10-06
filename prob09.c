@@ -63,6 +63,12 @@ void display(){
   row7 = join(row7, whiteSquare);
   row7 = join(row7, reverse(alterPawn));
 
+  //Fila 8
+  char ** row8 = join(reverse(pairSquare),reverse(blackBishop));
+  row8 = join(row8, pairSquare);
+  row8 = join(row8, pairSquare);
+  row8 = join(row8, whiteSquare);
+
   // Tablero
   char ** board = up(row1, row2);
   board = up(board, row3);
@@ -70,5 +76,6 @@ void display(){
   board = up(board, row5);
   board = up(board, row6);
   board = up(board, row7);
+  board = up(board, row8);
   interpreter(board);
 }
