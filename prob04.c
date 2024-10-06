@@ -1,6 +1,7 @@
 #include "chess.h"
 #include "figures.h"
 
+//Prueba fondo
 /*
 void display(){
   char ** dualBlock = join(whiteSquare, reverse(whiteSquare));
@@ -18,5 +19,11 @@ void display(){
   fRow = join(fRow, bishop);
   fRow = join(fRow, knight);
   fRow = join(fRow, rook);
+
+  char ** dualBlock = join(whiteSquare, reverse(whiteSquare));
+  char ** emptyRow = repeatH(dualBlock, 4);
+  char ** emptyRowReverse = reverse(emptyRow);
+
+  fRow = superImpose(fRow, emptyRowReverse);
   interpreter(fRow);
 }
