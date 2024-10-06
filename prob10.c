@@ -21,9 +21,17 @@ void display(){
   row2 = join(row2, reverse(pairSquare));
   row2 = join(row2, reverse(alterPawn));
   row2 = join(row2, whiteSquare);
+  
+  // Tercera fila
+  char ** row3 = emptyRow;
+
+  // Cuarta fila
+  char ** row4 = reverse(emptyRow);
 
   // Tablero
   char ** board =  up(row1, row2);
+  board = up(board, row3);
+  board = up(board, row4);
   interpreter(board);
   
 }
