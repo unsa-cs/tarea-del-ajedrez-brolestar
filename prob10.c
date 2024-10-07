@@ -46,12 +46,21 @@ void display(){
   row6 = join(row6, reverse(alterPawn));
   row6 = join(row6, whiteSquare);
 
+  // Septima fila
+  char ** blackRookblackBg = superImpose(reverse(rook), blackSquare);
+  char ** row7 = join(pairSquare, whiteSquare);
+  row7 = join(row7, blackRookblackBg);
+  row7 = join(row7, pairSquare);
+  row7 = join(row7, pairSquare);
+
+
   // Tablero
   char ** board =  up(row1, row2);
   board = up(board, row3);
   board = up(board, row4);
   board = up(board, row5);
   board = up(board, row6);
+  board = up(board, row7);
   interpreter(board);
   
 }
