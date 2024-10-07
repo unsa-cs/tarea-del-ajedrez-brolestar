@@ -53,6 +53,12 @@ void display(){
   row7 = join(row7, pairSquare);
   row7 = join(row7, pairSquare);
 
+  // Octava fila
+  char ** row8 = join(blackSquare, reverse(blackKingblackBg));
+  char ** revpairSquare = reverse(pairSquare);
+  row8 = join(row8, revpairSquare);
+  row8 = join(row8, revpairSquare);
+  row8 = join(row8, revpairSquare);
 
   // Tablero
   char ** board =  up(row1, row2);
@@ -61,7 +67,7 @@ void display(){
   board = up(board, row5);
   board = up(board, row6);
   board = up(board, row7);
+  board = up(board, row8);
   interpreter(board);
-  
 }
 
