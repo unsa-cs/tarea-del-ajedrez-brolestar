@@ -37,11 +37,21 @@ void display(){
   row5 = join(row5, whiteKnightblackBg);
   row5 = join(row5, pairSquare);
 
+  // Sexta fila
+  char ** whiteRookblackBg = superImpose(rook, blackSquare);
+  char ** row6 = join(blackSquare, reverse(whiteKnightblackBg));
+  row6 = join(row6, reverse(pairSquare));
+  row6 = join(row6, whiteRookblackBg);
+  row6 = join(row6, whiteSquare);
+  row6 = join(row6, reverse(alterPawn));
+  row6 = join(row6, whiteSquare);
+
   // Tablero
   char ** board =  up(row1, row2);
   board = up(board, row3);
   board = up(board, row4);
   board = up(board, row5);
+  board = up(board, row6);
   interpreter(board);
   
 }
